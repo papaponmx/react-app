@@ -1,35 +1,24 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import Todos from './todos.component.js';
+import {fetchUser} from '../actions/user.actions';
+
+@connect((store) => {
+	return {
+		user: store.user.user
+	}
+})
 
 export default class App extends React.Component {
-	constructor(){
-		super();
-		this.state = {
-			name: 'Jaime',
-			todos: [
-				{
-					id: '001',
-					name: 'Take out trash',
-					completed: false
-				},
-				{
-					id: '002',
-					name: 'Meal prep',
-					completed: false
-				},
-				{
-					id: '003',
-					name: 'Groceries',
-					completed: false
-				}
-			]
-		}
+	componentWillMount(){
+		this.props.dispatch(fetchUser());
 	}
 
 	render(){
+		const {user} = this.props;
 		return (
 			<div>
-				<Todos name={this.state.name} todos={this.state.todos} />
+				<Todos name={user.name}/>
 			</div>	
 		)
 	}

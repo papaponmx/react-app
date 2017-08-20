@@ -1,7 +1,7 @@
 export const fetchUser = () => ({
 	type: 'FETCH_USER_FULFILLED',
 	payload: {
-		name: 'John',
+		name: 'Jaime',
 		age: 24
 	}
 });

@@ -1,7 +1,7 @@
 {
-  "name": "react-hello-world",
+  "name": "app-starter",
   "version": "1.0.0",
-  "description": "My first react and redux app",
+  "description": "Webpack boilerplate app",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,10 +26,9 @@
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.1"
   },
-  "author": "@papaponmx",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^6.4.1"
+    "babel-core": "^6.26.0"
   }
 }
